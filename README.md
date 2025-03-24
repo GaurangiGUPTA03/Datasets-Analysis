@@ -22,3 +22,16 @@ The following machine learning techniques have been applied:
 To run this project, install the required dependencies using:
 ```bash
 pip install -r requirements.txt
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+!pip install ydata-profiling
+from ydata_profiling import ProfileReport
+profile = ProfileReport(df ,explorative = True )
+profile.to_notebook_iframe()  # For Jupyter Notebooks
+profile.to_file("your_report.html")
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
